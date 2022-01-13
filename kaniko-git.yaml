@@ -9,6 +9,7 @@ spec:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     args: ["--context=git://github.com/glitchcube/kaniko-demo",
+           "--dockerfile=Dockerfile",
             "--destination=glitchcube/devops-toolkit:1.0.0"]
     volumeMounts:
       - name: kaniko-secret
